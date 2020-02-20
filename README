@@ -1,0 +1,41 @@
+Caleb Freeman
+CS4760 - Operating Systems
+Instructor: Dr. Hauschild
+Assignment #5 - Resource management
+
+1-CONTENTS
+----------
+oss.c           - source code
+user.c          - child processes source code
+.git/           - git Repository
+Makefile        - makefile
+README          - this file
+
+2-WORKS CITED
+----------
+
+
+3-COMMAND LINE ARGUMENTS
+----------
+Usage: ./oss
+default settings: N/A
+
+4-CODE COMPILATION:
+---------
+In my computer I am able to run the make file an execute with ./oss
+example:
+>make
+>./oss
+
+5-DESIGN DECISIONS & ISSUES
+--------
+Major Issues:
+  -having issues passing incremented childprocesses (anything except 0, ie no 1-17),
+    therefore It is only running deadlock avoidance on a single process
+    which is not acquiring enough resources to initilize an avoidance of a possible deadlock.    --I was able to test my implementation of deadlock avoidace using max claims but unable to get it to work with the projects code.
+
+
+Minor Issues:
+-limited max forked processes to 100, this will and currently exceedes the 10000 line limit in the output file
+-in addition I can't not seem to get the verbose flag to work on the childprocess, these has to do with the incremented childprocess counter
+-i know i am still missing many intricate details, some aspects of my verbose mode are not working, and I am not counting for 10000 line termination
